@@ -1,0 +1,75 @@
+* {
+    word-break: break-word;
+}
+
+body {
+    padding: 60px 0;
+}
+
+.card__portfolio-info p,
+.card__portfolio-info h2,
+.card__portfolio-info a,
+.info-competencias {
+    font-family: "open sans",sans-serif;
+}
+
+#main {
+    max-width: 1500px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-competencias {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 40px;
+}
+
+#main-title {
+    font-family: "Robotto", sans-serif;
+    font-size: 30px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.card__portfolio {
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0, .1);
+}
+
+.card__portfolio-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    max-height: 200px;
+    min-height: 200px;
+}
+
+.card__portfolio-info {
+    padding: 30px;
+}
+
+.card__portfolio-info p {
+    font-size: 14px;
+}
+
+.card__portfolio-info h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+@media(max-width: 576px) {
+    #main,
+    .info-competencias {
+        padding: 25px;
+    }
+}
