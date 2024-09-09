@@ -1,26 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Eduardo Portfólio</title>
-	<link rel="stylesheet" href="style.css">
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <title>Portfolio website</title>
+    </head>
 <body>
-    <h1 id="main-title">Eduardo Cavichioli</h1>
-    <div class="info-competencias">
-        <p>Olá, me chamo Mauricio Eduardo Koop, mais conhecido como Eduardo. Nos últimos 3 anos venho dedicando meu tempo para adquirir conhecimentos em desenvolvimento web, performance, e webdesign. Tenho uma bagagem de 1 ano e 3 meses atuando na função de auxiliar de programação, na empresa Strongway. Sendo muito grato pela oportunidade e conhecimento adquirido nessa jornada de trabalho.</p>
-        <p>Atualmente estou aprofundando meus estudos em JS na escola Ebac. Atuando profissionalmente na criação de páginas web performáticas e responsivas, utilizando wordpress e elementor.</p>
-    </div>
+    <header>
+        <nav class="main-navigation">
+            <a href="#" class="logotipo">
+                Portfolio
+            </a>
+            <ul class="navigation">
+                <li class="navigation__list">
+                    <a href="#main-info" class="navigation__link">
+                        Início
+                    </a>        
+                </li>
+                <li class="navigation__list">
+                    <a href="#about" class="navigation__link">
+                        Sobre Mim
+                    </a>        
+                </li>
+                <li class="navigation__list">
+                    <a href="#skills" class="navigation__link">
+                        Habilidades
+                    </a>        
+                </li>
+                <li class="navigation__list">
+                    <a href="#contact" class="navigation__link">
+                        Contato
+                    </a>        
+                </li>
+            </ul>
+            <button class="main-navigation__toggle" type="button">
+                menu mobile
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
+                    <path d="M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
     
+    <main id="main">
+        <section id="main-info" class="main-info">
+            <h1 class="main-info__title">Mauricio Eduardo</h1>
+            <h2 class="main-info__title--nivel-2">Olá, meu nome é</h2>
+            <h3 class="main-info__title--nivel-3">Eu sou um desenvolvedor JavaScript</h3>
+            <p class="main-info__description">Além disso, trabalho com wordpress e figma!</p>
+            <p class="main-info__description">Podemos nos conhecer melhor?</p>
+        </section>
+    </main>
 
-	<section id="main">
+    <section id="about" class="about">
+        <div class="about__content">
+            <img class="about__img" src="img/eu.png">
+            <div class="about__info">
+                <h2 class="about__title">Sobre Mim</h2>
+                <h3 class="about__subtitle">Desenvolvedor Web</h3>
+                <p class="about__description">Meu nome é Mauricio, sou especializado em criação de websites, utilizo algumas das ferramentas mais usadas do mundo, como Wordpress e Elementor!</p>
+                <p class="about__description">Tenho experiência em desenvolvimento web e webdesigner</p>
+                <button class="about__btn" type="button">
+                    vamos conversar
+                    <a href="https://wa.me/5547991372353">Vamos Conversar</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="skills__title">Habilidades</h2>
+        <div class="skills__content">
+            <div class="skills__info">
+                <i class="devicon-wordpress-plain skills__icon"></i>
+                <h3 class="skills__subtitle">Desenvolvedor Web</h3>
+                <p class="skills__description">Transforme seu negócio físico em um ambiente virtual, crie seu website comercial. Entre em contato para mais informações!</p>
+                <button class="skills__btn" type="button">
+                    vamos conversar
+                    <a href="https://wa.me/5547991372353">Vamos Conversar</a>
+                </button>
+            </div>
+            <div class="skills__info">
+                <img class="skills__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+                <h3 class="skills__subtitle">Web Designer</h3>
+                <p class="skills__description">Como seu cliente te enxerga na mundo virtual, afetará a decisão do consumidor final. Crie um personalize estilos para seus serviços web.</p>
+                <button class="skills__btn" type="button">
+                    vamos conversar
+                    <a href="https://wa.me/5547991372353">Vamos Conversar</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
         <div class="card__portfolio">
             <img class="card__portfolio-img" src="https://i0.wp.com/blog.mfitpersonal.com.br/wp-content/uploads/2024/08/DSC08068-scaled.jpeg?resize=2048%2C1365&ssl=1">
             <div class="card__portfolio-info">
                 <h2>Blog Mfit Personal</h2>
                 <p>Desenvolvimento do blog Mfit Personal com base nas especificações fornecidas pela empresa.</p>
-                <a href="https://blog.mfitpersonal.com.br/">https://blog.mfitpersonal.com.br/</a>
+                <a class="card__portfolio-btn" href="https://blog.mfitpersonal.com.br/">https://blog.mfitpersonal.com.br/</a>
             </div>
         </div>
         <div class="card__portfolio">
@@ -28,7 +113,7 @@
             <div class="card__portfolio-info">
                 <h2>Blog Mfit Personal Portugal</h2>
                 <p>Desenvolvimento do blog Mfit Personal com base nas especificações fornecidas pela empresa.</p>
-                <a href="https://blog.mfitpersonal.pt/">https://blog.mfitpersonal.pt/</a>
+                <a class="card__portfolio-btn" href="https://blog.mfitpersonal.pt/">https://blog.mfitpersonal.pt/</a>
             </div>
         </div>
         <div class="card__portfolio">
@@ -36,7 +121,7 @@
             <div class="card__portfolio-info">
                 <h2>Faq Mfit Personal</h2>
                 <p>Desenvolvimento do website perguntas frequentes, relacionado as funcionalidades do app Mfit Personal</p>
-                <a href="https://blog.mfitpersonal.com.br/">https://blog.mfitpersonal.com.br/</a>
+                <a class="card__portfolio-btn" href="https://blog.mfitpersonal.com.br/">https://blog.mfitpersonal.com.br/</a>
             </div>
         </div>
         <div class="card__portfolio">
@@ -44,9 +129,80 @@
             <div class="card__portfolio-info">
                 <h2>Fernanda Terapêutica</h2>
                 <p>Website sobre a cliente Fernanda Rusvéer, disponibilizando seus serviços, produtos e sua biografia</p>
-                <a href="https://fernandarusveer.com.br/">https://fernandarusveer.com.br/</a>
+                <a class="card__portfolio-btn" href="https://fernandarusveer.com.br/">https://fernandarusveer.com.br/</a>
             </div>
         </div>
     </section>
+
+    <section class="talk-to-me">
+        <div class="talk-to-me__content">
+            <h2 class="talk-to-me__title">Podemos bater um papo?</h2>
+            <button class="talk-to-me__btn" type="button">
+                vamos conversar
+                <a href="https://wa.me/5547991372353">Vamos Conversar</a>
+            </button>
+        </div>
+    </section>
+
+    <!-- menu mobile -->
+    <nav class="nav-menu-mobile">
+        <div class="nav-menu-mobile__header">
+            <div id="close-icon"></div>
+            <a href="#" class="logotipo nav-menu-mobile__logotipo">
+                Portfolio
+            </a>
+        </div>
+        <ul class="menu-mobile">
+            <li class="menu-mobile__list">
+                <a href="#main-info" class="menu-mobile__link">
+                    Início
+                </a>        
+            </li>
+            <li class="menu-mobile__list">
+                <a href="#about" class="menu-mobile__link">
+                    Sobre Mim
+                </a>        
+            </li>
+            <li class="menu-mobile__list">
+                <a href="#skills" class="menu-mobile__link">
+                    Habilidades
+                </a>        
+            </li>
+            <li class="menu-mobile__list">
+                <a href="#contact" class="menu-mobile__link">
+                    Contato
+                </a>        
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Float Whatsapp -->
+    <a id="float-whatsapp" href="https://wa.me/5547991372353?text=Adorei%20seu%20Portfolio" target="_blank">
+        <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+    </a>
+
+    <footer id="contact" class="footer">
+        <h2 class="footer__title">Mauricio Eduardo</h2>
+        <a class="footer__link" href="https://www.linkedin.com/in/eduardo-cavichioli-0b988912b/">
+            <i class="devicon-linkedin-plain footer__icon"></i>
+        </a>
+        <p class="footer__copyright">Copyright By Eduardo</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function(){
+            var btnToggle = document.querySelector('.main-navigation__toggle');
+            var elNav = document.querySelector('.nav-menu-mobile');
+            const btnClose = document.querySelector('#close-icon');
+
+            btnToggle.addEventListener('click', function(){
+                var openMobileMenu = document.querySelector('.menu-mobile--toggle');
+                !openMobileMenu ? elNav.classList.add('menu-mobile--toggle') : elNav.classList.remove('menu-mobile--toggle');
+            })
+
+            btnClose.addEventListener('click', function(){
+                elNav.classList.remove('menu-mobile--toggle');
+            })
+        });
+    </script>
 </body>
-</html>
