@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;1,500&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Murecho:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #06000B;
+    color: white;
+}
+
+.swiper {
+    overflow: unset!important;
+}
+
+// Centraliza verticalmente qualquer coisa
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transition {
+    transition: all .3s linear;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Surround Sections
+.surrounds-sections {
+    position: relative;
+    overflow: hidden;
+
+    /* Circles details */
+    &-circle-1,
+    &-circle-2 {
+        position: absolute;
+        bottom: 0;
+        left: 400px;
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+        background: #ad00ff;
+        border-radius: 100%;
+        filter: blur(150px);
+        box-shadow: 0 0 300px 200px #ae00ffae;
+        z-index: -1;
+    }
+
+    &-circle-2 {
+        box-shadow: 0 0 300px 200px #0038a8;
+        background: #0039a8bf;
+        right: 400px;
+        top: unset;
+        left: unset;
+        bottom: unset;
+    }
+
+    &-circle-3,
+    &-circle-4 {
+        position: absolute;
+        top: 400px;
+        left: 340px;
+        width: 100%;
+        max-width: 50px;
+        height: 50px;
+        background: $secondary-color;
+        border-radius: 100%;
+        filter: blur(150px);
+        box-shadow: 0 0 300px 200px $secondary-color;
+        z-index: -1;
+    }
+
+    &-circle-4 {
+        box-shadow: 0 0 300px 200px $third-color;
+        background: $third-color;
+        right: 0;
+        left: unset;
+        top: unset;
+        right: 400px;
+        bottom: 500px;
+    }
+}
+
+// Placeholders
+%title {
+    font-family: $font-family-title;
+    font-size: $font-size-title;
+    letter-spacing: 1.5px;
+    font-weight: $font-weight-600;
+    text-align: center;
+
+    @media(max-width: $bp-small) {
+        & {
+            font-size: 2em;
+        }
+    }
+}
+
+%button {
+    font-family: $font-family-title;
+    font-weight: $font-weight;
+    font-size: 1.13em;
+    outline: none;
+    background: white;
+    max-width: 180px;
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    border-color: transparent;
+    transition: $transition;
+
+    &:hover {
+        box-shadow: 0 0 30px 0px rgba(255,255,255, .3);
+    }
+}
+
+%button-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
