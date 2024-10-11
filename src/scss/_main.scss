@@ -1,6 +1,168 @@
+.main-nav-mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 350px;
+    z-index: 50;
+    background: hsla(0, 0%, 14%, 0.4);
+    box-shadow: 0 0 50px 0 hsla(0, 0%, 14%, 0.4);
+    backdrop-filter: blur( 13px );
+    -webkit-backdrop-filter: blur( 13px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 30px;
+    transition: $transition;
+    visibility: visible;
+
+    &[aria-hidden="true"] {
+        visibility: hidden;
+        transition: $transition;
+        left: -350px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 35px;
+        font-family: $font-family-title;
+        letter-spacing: $letter-spacing;
+        font-weight: $font-weight-600;
+
+        a {
+            transition: $transition;
+         &:hover {
+            color: $primary-color;
+            transition: $transition;
+         }   
+        }
+    }
+
+    &__close {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: none;
+
+        span {
+            display: block;
+            background: hsla(0, 0%, 14%, 0.4);
+            border-radius: 50px;
+            height: 35px;
+            width: 35px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8px;
+            transition: $transition;
+
+            &:hover {
+                background: hsla(0, 0%, 14%, 0.6);
+                box-shadow: 0 0 20px 0 hsla(0, 0%, 40%, 0.6);
+                transition: $transition;
+            }
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 18px;
+        font-family: $font-family-text;
+        font-weight: 500;
+        margin-top: 50px;
+    }
+
+    &__link {
+        transition: $transition;
+
+        &:hover {
+            color: $primary-color;
+            transition: $transition;
+            padding-left: 3px;
+        }
+    }
+
+    &__socials {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+
+        &-block {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+
+        &-link {
+            background: hsla(0, 0%, 14%, 0.4);
+            box-shadow: 0 0 50px 0 hsla(0, 0%, 14%, 0.4);
+            backdrop-filter: blur( 13px );
+            -webkit-backdrop-filter: blur( 13px );
+            border: 1px solid hsla(0, 0%, 24%, 0.8);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            transition: $transition;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: $transition;
+            }
+        }
+    }
+
+    &__socials-title {
+        @extend .visually-hidden;
+    }
+}
+
 .surrounds-main-section {
     position: relative;
     overflow: hidden;
+
+    .btn-open-mobile {
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        outline: none;
+        border: none;
+        background: hsla(0, 0%, 14%, 0.4);
+        border-radius: 50px;
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+        color: white;
+        z-index: 50;
+        font-size: 16px;
+        margin-top: 8px;
+        z-index: 49;
+        display: none;
+        transition: $transition;
+
+        &:hover {
+            background: hsla(0, 0%, 14%, 0.6);
+            box-shadow: 0 0 20px 0 hsla(0, 0%, 40%, 0.6);
+            transition: $transition;
+        }
+
+        @media(max-width: $bp-medium) {
+            & {
+                display: block;
+            }
+        }
+    }
 
     .main-section {
         max-width: $max-width;
@@ -123,6 +285,10 @@
             max-width: $bp-xlarge;
             margin: $centered;
             overflow: hidden;
+
+            #tools-title {
+                @extend .visually-hidden;
+            }
 
             @media(min-width: 640px) {
                 & .swiper-slide {
