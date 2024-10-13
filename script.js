@@ -22,6 +22,52 @@ $(document).ready(function(){
         }
     }
 
+    // close mobile menu
+    let navMobileLink = $('.main-nav-mobile__link');
+    let mainNavLink = $('.main-nav__link');
+
+    function scrollToSection(linksOfMenu){
+        $.each(linksOfMenu, (index, element) => {
+            let link = $(element);
+    
+            link.on('click', (e) => {
+                e.preventDefault();
+                let curretnLink = $(e.target);
+                let hrefCurrentLink = curretnLink.attr('href');
+                let elSection = $(hrefCurrentLink);
+                let elSectionTop = elSection.offset().top;
+                let elNodeName = $(curretnLink).parent().parent().parent()[0].nodeName;
+                console.log(elNodeName);
+    
+                $('html, body').animate({
+                    scrollTop: elSectionTop
+                }, 800);
+                
+                // Depois de scrollar fecha o menu mobile se for o menu mobile que estiver sendo interagido com o usuário
+                if(elNodeName != "HEADER"){
+                    controlsMobileMenu();
+                }
+            })
+        })
+    }
+
+    scrollToSection(navMobileLink);
+    scrollToSection(mainNavLink);
+
+    // Esconde a barra de navegação quando houver scroll down, exibe com scrollUp
+    let prevScroll = 0;
+    const header = $('.main-nav');
+
+    $(window).on('scroll', () => {
+        let currentScroll = window.scrollY;
+        if(prevScroll > currentScroll){
+            header.css('top', '0');
+        }else{
+            header.css('top', '-100px');
+        }
+        prevScroll = currentScroll;
+    })
+
     var swiper = new Swiper(".testimonials__swiper", {
         // Navigation arrows
         navigation: {
